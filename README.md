@@ -28,7 +28,7 @@ This exercise consists of two sections:
 
 - In this task, you might need to develop at least 3 types of Restful APIs [GET for Search, Put for Update and Delete]; You could use any backend languages for this task;
 
-** Once completed, create a branch [your fullname] of this repo and push your code to that branch;
+** Put all your code inside a folder [using your fullname]; Once completed, create a pull request to this repo;
 
 ** Estimate time of the whole question should be ~ 1 day; You can upload your answer no later than Friday [June 15th 11:59pm];
 
