@@ -1,0 +1,26 @@
+.course{
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.course h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.course span{
+    margin: 10px;
+}
+
+.course .footer{
+    text-align: center;
+}
+
+.course .footer .btn{
+    margin: 0px 10px;
+}
+
+.course .tag{
+    margin: 5px 5px;
+}

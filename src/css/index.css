@@ -1,0 +1,21 @@
+
+html, body, #root {
+  height: 100%;
+}
+
+
+#app-container{
+  text-align: center;
+  width: 500px;
+  margin: 0px auto;
+  background-color: white;
+}
+
+#app-container p{
+  text-align: left;
+  font-size: 20px;
+}
+
+#app-container .btn{
+  margin: 0px 10px;
+}
