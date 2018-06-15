@@ -1,3 +1,59 @@
+# Usage
+
+-	Install npm packages
+```
+npm install
+```
+
+-	Make sure MongoDB is up and listening @ port 27017 (defult port)
+
+-	Run crawler by
+```
+npm run crawler
+```
+-	Run server @port 3000 by
+```
+npm run server
+```
+
+- Host web application by 
+```
+npm start
+```
+
+- Access web application in http://localhost:8000
+
+# Flaw
+Two React components implemented but react-router does not work therefore only one components can be view.
+
+The default page is the searching page. In each row of course, there is an edit button that does not work. That button is supposed to take you to the edit page of the course.
+
+TO CHECKOUT THE EDIT PAGE
+
+- please uncomment line 20 in src/index.js
+
+- and comment line 21 in src/index.js
+
+- and refresh browser.
+
+and refresh the page again to check the edit page, save button and delete are functional but the back button is not.
+
+after deleted, you are supposed to be taken to the search page, but due to the disfunction router, it fails to do that.
+
+# Delete behaviour 
+
+After deletion, the course will be disabled in the search page (becomes grey) and still leave record in database.
+
+
+
+
+
+
+
+
+
+
+
 # react-interview-question
 
 The main purpose of this excerise to test your programming skill and understanding on (1) Restful APIs, (2) HTML+CSS, (3) ReactJS or relevant frontend frameworks such as VueJS.

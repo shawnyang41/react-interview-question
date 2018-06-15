@@ -29,20 +29,21 @@ class Course extends React.Component{
         var that = this;
         var control = this.state.tagControl;
         console.log('send');
-        db.getCourse(this.state.id, function(course){
-            console.log('hey');
-            console.log(course);
-            if (course.tags == undefined) control.tags = [];
-            else control.tags = course.tags;
+        console.log(db.search("CS", function(courses){
+            var newControl = control;
+            if(courses[0].tags != undefined) newControl.tags = courses[0].tags;
             that.setState({
-                course: course,
-                loading: false,
-                tagControl: control
+                course: courses[0],
+                id: courses[0].id,
+                tagControl: newControl,
+                loading: false
             })
-            document.getElementById("desc").value = course.courseDesc;
-        })
-    
+            document.getElementById("desc").value = courses[0].courseDesc;
+            console.log('from frontend');
+            console.log(that.state.course);
+      }));
     }
+    
     delete(){
         db.updateCourse(this.state.id, {deleted: true}, function(){
             console.log('got');
