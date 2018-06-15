@@ -39,7 +39,6 @@ app.post('/course/searchByString', (req, res)=>{
 app.post('/course/modifyCourse', (req, res)=>{
   //course.searchByString start
     console.log(req.body.target);
-    console.log(req.body.updateDetail);
     dbOperation.updateCourse(res, req.body.target, req.body.updateDetail);
   // course.searchByString end
   }

@@ -17,8 +17,8 @@ class Main extends React.Component{
       
         <BrowserRouter>
           <Switch>
-            <Route exact path='/' component={Course}></Route>
-            {/* <Route exact path='/' component={SearchPage}></Route> */}
+            {/* <Route exact path='/' component={Course}></Route> */}
+            <Route exact path='/' component={SearchPage}></Route>
           </Switch>
         </BrowserRouter>
     )

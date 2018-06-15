@@ -34,14 +34,14 @@ class Course extends React.Component{
             if(courses[0].tags != undefined) newControl.tags = courses[0].tags;
             that.setState({
                 course: courses[0],
-                id: courses[0].id,
+                id: courses[0]._id,
                 tagControl: newControl,
                 loading: false
             })
             document.getElementById("desc").value = courses[0].courseDesc;
             console.log('from frontend');
             console.log(that.state.course);
-      }));
+        }));
     }
     
     delete(){

@@ -34,7 +34,6 @@ var dbOperation = {
                     //callback function for toArray end
                     db.close();
                 });
-                
             //callback function for mongoDB connection end        
             });
             
@@ -47,7 +46,8 @@ var dbOperation = {
                 if (err) throw err;
                 var dbo = db.db("interviewDB");
                 dbo.collection("courses").updateOne({_id : new ObjectId(id)}, {$set : updateDetail}).then(err=> {
-                    res.json({});
+                    console.log(updateDetail);
+                    console.log(id);
                     console.log('changed');
                     db.close();
                 });

@@ -15,14 +15,19 @@ class SearchPage extends React.Component {
     constructor(props){
       super(props);
       this.state = {
-        courses : []
+        courses : [],
+        loading : 'false'
       }
     }
     search(target){
       var that = this;
+      var newState = this.state
+      newState.loading = 'true';
+      this.setState(newState);
       console.log(db.search(target.trim(), function(courses){
         that.setState({
-          courses: courses
+          courses: courses,
+          loading : 'false'
         })
         console.log('from frontend');
         console.log(that.state.courses);

@@ -56,6 +56,7 @@ var db = {
         request.end();
     },
     updateCourse: function(target, updateDetail, callback){
+        console.log('target = ', target);
         var bodyToSend = {target, updateDetail};
         var options = {
             hostname: 'localhost',
@@ -69,9 +70,10 @@ var db = {
         var body = '';
         var request = http.request(options, function(res){
         });
+        request.on()
         request.write(JSON.stringify(bodyToSend));
         request.end();
-        
+        callback();
     }
 }
 
